@@ -43,7 +43,7 @@ SELECT last_name, salary,email FROM employees;
 ```SQL
 SELECT * FROM employees;
 ```
-**不足是顺序不变，如果要定义顺序还是用方法(2)**
+**不足是顺序不变，如果要定义顺序还是用方法(2)**  
 当遇到字段又是关键字的时候需要加\`\`
 选中哪段代码就执行哪段。
 #### (4) 查询常量值
