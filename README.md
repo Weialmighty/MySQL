@@ -26,7 +26,39 @@
 单行注释，`-- 注释文字`  
 多行注释，`/* 注释文字 */`
 ## DQL(Database Query Language)
-1. 基础查询：  
+### 1. 基础查询：  
 语法：`select 查询列表 from 表名;`  
 特点：  
-(1). 查询列表可以是：表中的字段
+* 查询列表可以是：表中的字段、常量、常量值、表达式、函数。  
+* 查询的结果是一个虚拟的表格。
+#### (1) 查询表中的单个字段
+```SQL
+SELECT last_name FROM employees;
+```
+#### (2) 查询表中的多个字段
+```SQL
+SELECT last_name, salary,email FROM employees;
+```
+#### (3) 查询表中的所有字段
+```SQL
+SELECT * FROM employees;
+```
+**不足是顺序不变，如果要定义顺序还是用方法(2)**
+当遇到字段又是关键字的时候需要加\`\`
+选中哪段代码就执行哪段。
+#### (4) 查询常量值
+```SQL
+SELECT 100;
+SELECT 'john';
+```
+#### (5) 查询表达式
+```SQL
+SELECT 100*98;
+```
+```SQL
+SELECT 100%98;
+```
+#### (6) 查询函数
+```SQL
+SELECT VERSION();
+```
